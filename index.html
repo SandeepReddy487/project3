@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+    .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(19, 7, 7);
+}
+
+p{
+    color: #555555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #f1607d;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background: rgba(160, 55, 55, 0.856);
+}
+
+.header{
+    background-image: url(images/spa-6.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 660px;
+}
+
+.header .row{
+    margin-top:70px ;
+}
+
+.categories{
+    margin: 70px 0;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555555;
+}
+
+.title::after{
+    content: '';
+    background: #faadbd ;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* #demo22{
+    background-color: blanchedalmond;
+    padding: 20px;
+} */
+.section4{
+    text-align: center;
+    background-color: rgb(204, 195, 183);
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+
+
+
+.container h1 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	/* margin-bottom: 40px; */
+	font-weight: bold;
+	color: #19D28F;
+}
+/* .container {
+	padding-top: 8%;
+} */
+.single-team {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+    
+}
+.team-img {
+	width: 100%;
+	height: 250px;
+	padding: 20px;
+	text-align: center;
+	transition: all .5s ease;
+}
+.one {
+	background-image: url(images/team1.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+.two {
+	background-image: url(images/team2.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+.three {
+	background-image: url(images/team3.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+.team-text {
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	padding: 20px;
+	text-align: center;
+	transition: all .5s ease;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+	background-color: #141523;
+	/* background-color: ; */
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transform: translateX(110px) rotateY(-90deg);
+	color: #19D28F;
+}
+.team-text h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.team-text h4 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+.team-text p {
+	line-height: 2;
+}
+.img-area {
+	position: relative;
+	top: 80px;
+	transform: translateX(-50%);
+}
+.single-team:hover .team-img {
+	opacity: 0;
+	transform: translateX(-110px) rotateY(90deg);
+}
+.single-team:hover .team-text {
+	opacity: 1;
+	transform: rotateY(0);
+}
+.section13{
+    background-image: url(images/img2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 300px; */
+}
+#wapper{
+  text-align: center;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text 6s steps(16) infinite alternate;
+  border-right: 3px solid black;
+  font-size: 40px;
+}
+@keyframes text{
+  0%{
+    width: 0ch;
+  }
+  50%{
+    width: 30ch;
+  }
+}
+.scrollTop {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+	background: deepskyblue;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+    text-decoration: none;
+}
+.scrollTop.active {
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(-50px);
+    text-decoration: none;
+}
+
+footer{
+               margin-top: 50px;
+             }
+             .gotopbtn{
+              position: fixed;
+              width: 50px;
+              height: 50px;
+              background: #27ae60;
+              bottom: 40px;
+              right: 50px;
+            
+              text-decoration: none;
+              text-align: center;
+              line-height: 50px;
+              color: white;
+              font-size: 22px;
+            }
+            
+
+</style>
+</head>
+<body>
+
+    <section id="demo2">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="" / width="60px">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"></a>
+                    <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-1 text-center" style="margin-top: 110px; color:red; font-size: 60px;font-family: 'Merriweather',serif;">REJUVENATED BODY & SOUL</h1>
+                        <h1 class="text-center" id="wapper" style="text-align: center; margin: auto; display: block;" >Have a look at lorem ipsum sit .</h1>
+
+                        <!-- <h3 class="text-center" style="margin-top: 0px; color: black; font-size: 40px;    font-family: 'Merriweather',serif;">A lotus spa is dedicated to inspiring Balanced Life - Healthy Mind.</h3>  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br><br>
+<section class="section13">
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <h5 class="text-center" style="color: darkorchid;">Welcome​</h5>
+    <h2 class="text-center" style="color: darkorchid;">A Few Words about Me​</h2>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laudantium repellat delectus, doloribus molestias recusandae incidunt rerum exercitationem debitis nisi tempora possimus veritatis dolor odit, fuga minus repudiandae corrupti? Iure fuga id similique deleniti dolorum officiis architecto sed, molestiae totam ipsam omnis quibusdam repellendus pariatur eos? Nostrum at magni unde! Accusamus tempora officia ratione, alias illum excepturi maxime minima, sit rem ex sunt quidem similique earum quisquam vitae autem facere neque qui velit, beatae commodi libero incidunt. Fugit, earum? Cum et quos velit aliquam veniam at, corrupti tenetur numquam minus odit iusto ut asperiores, deserunt eligendi! Nesciunt corporis vel quo!</p>
+    <br>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, nemo a perspiciatis nisi nobis similique labore facilis, dignissimos quaerat qui eveniet eos cupiditate! Exercitationem pariatur, placeat doloribus quis quaerat tenetur natus est earum sequi repellendus perferendis nisi ipsam animi esse sit et, sed deleniti corrupti id dolorum incidunt, laudantium voluptas! Blanditiis alias voluptatibus maiores repudiandae tenetur autem exercitationem illo dolores quas adipisci vitae deleniti quia, laboriosam, placeat est necessitatibus voluptas perferendis et veritatis earum quis. Voluptatibus nesciunt assumenda voluptates non!</p>
+    <button type="button" class="btn btn-warning btn-circle btn-lg " style="text-align: center; margin: auto; display: block;">READ MORE</button>
+    
+    </div>
+    </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+ <div class="container">
+     <p class="text-center">Have a Look at Our</p>
+     <h3 class="text-center">Expertise Areas</h3>
+     <hr color="red" width="100px">
+<div class="row">
+<div class="col-md-6">
+<img src="images/massage-oil.jpg" alt="">
+</div>
+<div class="col-md-6 mt-4">
+<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo natus blanditiis quas pariatur explicabo, facilis beatae odio. Odit tempora inventore reprehenderit et at rem error sunt repellendus eos accusantium sit minus, temporibus nemo similique esse dolorum blanditiis asperiores sapiente.</p> -->
+
+<div class="col-md-12">
+    <span>
+        <img src="images/icon01 (1).png" alt="" width="40px">
+        <h5>Wellness</h5>
+    </span>
+<p>Volutpat iste! Dolor, quasi malesuada dictumst officia nisi! Tempus quo volutpat ad ratione.</p>        
+
+</div>
+<div class="col-md-12">
+    <span>
+        <img src="images/icon02.png" alt="" width="40px">
+        <h5>Beauty</h5>
+    </span>
+<p>Volutpat iste! Dolor, quasi malesuada dictumst officia nisi! Tempus quo volutpat ad ratione.</p>        
+
+</div>
+<div class="col-md-12">
+    <span>
+        <img src="images/icon03.png" alt="" width="40px">
+        <h5>Massage</h5>
+    </span>
+<p>Volutpat iste! Dolor, quasi malesuada dictumst officia nisi! Tempus quo volutpat ad ratione.</p>        
+</div>
+</div>
+</div>
+ </div>
+ <br>
+ <br>
+ <br>
+<div class="container">
+    <p class="text-center">We Make Sure We Serve</p>
+    <h3 class="text-center">We Make Sure We Serve</h3><br><br>
+<div class="row">
+<div class="col-md-4">
+<img src="images/icon04.png" alt="" style="margin: auto; text-align: center;display:block;">
+<h3 class="text-center">Ayurvedic Treatment</h3>
+<hr color="black" width="200px">
+<p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+</p>
+</div>
+<div class="col-md-4">
+    <img src="images/icon05.png" alt="" style="margin: auto; text-align: center;display:block;">
+    <h3 class="text-center"> Ozone Therapy</h3>
+    <hr color="black" width="180px">
+    <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer. 
+    </p>
+    </div>
+    <div class="col-md-4">
+        <img src="images/icon06.png" alt="" style="margin: auto; text-align: center;display:block;">
+        <h3 class="text-center">Stone cure</h3>
+        <hr color="black" width="100px">
+        <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+        </p>
+        </div>    
+       </div>
+      </div>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row text-center">
+<div class="col-md-12">
+<h5>Lotus Spa</h5>
+<h3>Appointment</h3>
+<h6>Want to Make a Booking or Have a Question?</h6>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, omnis.</p>
+<button type="button" class="btn btn-primary btn-lg" style="display: block; margin: auto;">BOOK AN APPOINTMENT</button>
+<img src="images/divider-free.png" alt="">
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div class="row">
+<div class="col">
+<img src="images/aroma-therapy-treat.jpg" alt="" width="100%">
+</div><br><br>
+<div class="col">
+    <img src="images/icon20.png" alt="">
+    <h3>Luxury Spa</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quisquam quos quibusdam aliquam quaerat soluta?</p>
+     <h4>Starting From $75</h4>
+</div>
+</div>
+</div><br><br>
+<div class="col-md-6">
+<div class="row">
+    <div class="col">
+    <img src="images/team4.jpg" alt="" width="100%">
+    </div>
+    <div class="col" >
+        <img src="images/icon21.png" alt="" >
+        <h3>Stone Therapy</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quisquam quos quibusdam aliquam quaerat soluta?</p>
+         <h4>Starting From $75</h4>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="row" >
+    <div class="col" id="demo22">
+    <img src="images/team4.jpg" alt="" width="100%">
+    </div>
+    <div class="col">
+        <img src="images/icon22.png" alt="" >
+        <h3>Aroma Therapy</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quisquam quos quibusdam aliquam quaerat soluta?</p>
+         <h4>Starting From $75</h4>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="row">
+        <div class="col">
+        <img src="images/team5.jpg" alt="" width="100%">
+        </div>
+        <div class="col">
+            <img src="images/icon24.png" alt="" >
+            <h3>Skin Treatment</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quisquam quos quibusdam aliquam quaerat soluta?</p>
+             <h4>Starting From $75</h4>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div><br><br>
+    <button type="button" class="btn btn-primary btn-lg" style="display: block; margin: auto;">BOOK AN APPOINTMENT</button>
+
+
+    <section class="section4">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+            <p>Lotus spa center is the best till date I have experienced in past few months. They<br> know hospitality very well. Even the spa & massage is extremely soothing. Rates <br> are also pretty reasonable.
+            </p>
+            <img src="images/clientspa01.png" alt="" style="border-radius: 50%; margin: auto; display: block;">
+            </div>
+            </div>
+                </div>
+            
+    </section>
+    <br>
+    <br>
+    <br>
+	<div class="container">
+        <h1>telented team</h1>
+        <br>
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="single-team">
+					<div class="team-img one">
+						<div class="img-area"></div>
+					</div>
+					<div class="team-text">
+						<h4>Relaxation​</h4>
+						<h2>Facial Massage​​</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus labore sapiente ducimus, quam, maxime aliquid.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="single-team">
+					<div class="team-img two">
+						<div class="img-area"></div>
+					</div>
+					<div class="team-text">
+						<h4>Thai</h4>
+						<h2>Back Massage​</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus labore sapiente ducimus, quam, maxime aliquid.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="single-team">
+					<div class="team-img three">
+						<div class="img-area"></div>
+					</div>
+					<div class="team-text">
+						<h4>Back Massage​</h4>
+						<h2>Foot Massage​</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus labore sapiente ducimus, quam, maxime aliquid.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<br>
+<a class="scrollTop" href="#" style="text-decoration: none;"><i class="fa fa-chevron-up"></i></a> 
+<!--  <footer> -->
+    <footer class="page-footer bg-dark">
+        <div class="bg-success">
+        <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+            <div class="col-md-12 text-center">
+        <a href="#"><i class="fa fa-google-plus text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"> <i class="fa fa-whatsapp text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter text-white mr-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="container text-center text-md-left mt-5 text-white">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">The Providers</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+        <p class="mt-2" style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p>
+        </div>
+        <div class="col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Products</h6>
+            <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+            <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+        
+            <ul class="list-unstyled text-white">
+              <li class="my-2"><a href="#" style="color: white;">HTML 5</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">CSS</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">JAVA SCRIPT</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">BOOTSTRAP</a> </li>
+          </ul>
+          </div>
+          <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Usefull Links</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+              <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+          
+              <ul class="list-unstyled text-white">
+                  <li class="my-2"><a href="Index.html" style="color: white;">Home</a> </li>
+                  <li class="my-2"><a href="about.html" style="color: white;">About Us</a> </li>
+                  <li class="my-2"><a href="user.html" style="color: white;">Services</a> </li>
+                  <li class="my-2"><a href="contact.html" style="color: white;">Contact</a> </li>
+              </ul>
+              </div>
+              <div class="col-md-3 mx-auto mb-4">
+                  <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                  <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px;">
+                  <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+                  <ul class="list-unstyled">
+                      <li class="my-2"> <i class="fa fa-home mr-3" aria-hidden="true"></i>suryapet</li>
+                      <li class="my-2"><i class="fa fa-envelope-o mr-3" aria-hidden="true"></i> gaggenapallysandeep487@gmail.com</li>
+                      <li class="my-2"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>+91-9666251994</li>
+                      <li class="my-2"><i class="fa fa-print mr-3" aria-hidden="true"></i>+0123456789</li>
+                  </ul>
+                  </div>
+        </div>
+        </div>
+        <hr color="white" width="80%">
+        <div class="footer-copyright text-center py-3 text-white">
+          <p style="color: white;">Copyright © 2020 SPA . All rights reserved.</p>
+          <!-- <p style="color: white;">Desigend By The Providers</p> -->
+        </div>
+        </footer>  
+        
+        <!-- </footer> -->
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script> 
+<script>
+       const scrollTop = document.querySelector(".scrollTop"); 
+       
+       window.addEventListener("scroll", () => {
+           if (window.pageYOffset > 100){
+               scrollTop.classList.add("active");
+           } else{
+               scrollTop.classList.remove("active");  
+           }
+       })
+</script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></body>
+</html>

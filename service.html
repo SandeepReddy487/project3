@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      /* position: fixed; */
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    color: #555555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #f1607d;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background: rgba(160, 55, 55, 0.856);
+}
+
+.header{
+    background-image: url(images/img6.jpg);
+    background-size: cover;
+    /* opacity: 0.5; */
+    height: 400px;
+}
+
+.header .row{
+    margin-top:70px ;
+}
+
+.categories{
+    margin: 70px 0;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555555;
+}
+
+.title::after{
+    content: '';
+    background: #faadbd ;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+    .blog{
+        background-image: url(images/blog2.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .blog2{
+        background-image: url(images/blog01.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    .container1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 100vh; */
+        }
+        .container1{
+            position: relative;
+            display: flex;
+            width: 1100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container1 .card{
+            position: relative;
+            width: 300px;
+            cursor: pointer;
+
+        }
+        .container1 .card .name{
+            position: relative;
+            padding: 10px 0;
+            border: 2px solid #000;
+            text-align: center;
+            background: #fff;
+            z-index: 1;
+
+        }
+        .container1 .card .name h3{
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+        .container1 .card:hover .details{
+        height: 450px;
+        }
+        .container1 .card .details{
+            position: relative;
+            text-align: center;
+            height: 0;
+            /* top: -2px; */
+            transition: 0.5s;
+            border: 2px solid #000;
+            /* margin-top: -2px; */
+            overflow: hidden;
+        }
+        .container1 .card .details .content{
+            position: relative;
+            /* padding: 40px 20px; */
+
+        }
+        .container1 .card .details .content h2{
+            font-size: 3em;
+            font-weight: 500;
+        }
+        .container1 .card .details .content h2 span{
+            text-align: center;
+            margin: auto;
+            display: block;
+            font-size: 0.4em;
+        }
+        .container1 .card .details .content a{
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+        .container1 .card:nth-child(1).name{
+            background: #d2fff2;
+        }
+        .container1 .card:nth-child(1).details{
+            background: #f1fffb;
+        }
+        .container1 .card:nth-child(2).name{
+            background: #d2fff2;
+        }
+        .container1.card:nth-child(2).details{
+            background: #f1fffb;
+        }
+        .container1 .card:nth-child(3).name{
+            background: #d2fff2;
+        }
+        .container1 .card:nth-child(3).details{
+            background: #f1fffb;
+        }
+
+        .scrollTop {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+	background: deepskyblue;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+    text-decoration: none;
+}
+.scrollTop.active {
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(-50px);
+    text-decoration: none;
+}
+
+footer{
+               margin-top: 50px;
+             }
+             .gotopbtn{
+              position: fixed;
+              width: 50px;
+              height: 50px;
+              background: #27ae60;
+              bottom: 40px;
+              right: 50px;
+            
+              text-decoration: none;
+              text-align: center;
+              line-height: 50px;
+              color: white;
+              font-size: 22px;
+            }
+            
+</style>
+</head>
+<body>
+
+    <section id="demo2">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="" / width="60px">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"></a>
+                    <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class=" display-1 text-center" style="margin-top: 20px; color: black; font-size: 20px;">SERVE OUR CLIENTS</h5>
+                       <h3 class="text-center" style="margin-top: 0px; color: black; font-size: 40px;">SERVE OUR CLIENTS</h3> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- <p class="text-center">Well Known Services</p> -->
+        <h3 class="text-center"> Service </h3><br><br>
+    <div class="row">
+    <div class="col-md-4">
+    <img src="images/icon11-free-img.png" alt="" style="margin: auto; text-align: center;display:block;">
+    <h3 class="text-center">Ayurvedic Treatment</h3>
+    <hr color="black" width="200px">
+    <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+    </p>
+    </div>
+    <div class="col-md-4">
+        <img src="images/icon01 (1).png" alt="" style="margin: auto; text-align: center;display:block;">
+        <h3 class="text-center"> Ozone Therapy</h3>
+        <hr color="black" width="180px">
+        <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer. 
+        </p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/icon13-free-img.png" alt="" style="margin: auto; text-align: center;display:block;">
+            <h3 class="text-center">Stone cure</h3>
+            <hr color="black" width="100px">
+            <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+            </p>
+            </div>    
+           </div>
+          </div>
+          <div class="container">
+            <!-- <p class="text-center">We Make Sure We Serve</p>
+            <h3 class="text-center">We Make Sure We Serve</h3><br><br> -->
+        <div class="row">
+        <div class="col-md-4">
+        <img src="images/icon14-free-img.png" alt="" style="margin: auto; text-align: center;display:block;">
+        <h3 class="text-center">Ayurvedic Treatment</h3>
+        <hr color="black" width="200px">
+        <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+        </p>
+        </div>
+        <div class="col-md-4">
+            <img src="images/icon15-free-img.png" alt="" style="margin: auto; text-align: center;display:block;">
+            <h3 class="text-center"> Ozone Therapy</h3>
+            <hr color="black" width="180px">
+            <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer. 
+            </p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/icon16-free-img.png" alt="" style="margin: auto; text-align: center;display:block;">
+                <h3 class="text-center">Stone cure</h3>
+                <hr color="black" width="100px">
+                <p>Optio wisi magni dui nam ducimus doloribus nemo pariatur sodales facilisis officiis. Fusce nisl integer.
+                </p>
+                </div>    
+               </div>
+              </div>
+             <br>
+             <br>
+             <br>
+             <br>
+    <section class="blog">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>15% Off For New Visitors...</h2>
+<h6>Maecenas exercitationem nonummy. Urna, posuere provident? Sociis voluptatibus, ridiculus <br> maecenas minima ipsa laboris bibendum. Commodo.</h6>
+</div>
+<button type="button" class="btn btn-primary btn-lg" style="display: block; margin: auto;">BOOK AN APPOINTMENT</button>
+</div>
+</div>
+</section>
+ <br>
+ <br>
+ <br>
+<div class="container container1">
+    <div class="card">
+    <div class="name">
+     <h3>Free</h3>
+    </div>
+    <div class="details">
+<div class="content">
+<h2 style="text-align: center;margin: auto;display: block;">$0 <span>/Month</span></h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur perspiciatis quos et cum ullam quae inventore ad repudiandae!</p>
+<a href="#" style="width: 150px;">Try Now</a>
+</div>
+    </div>
+    </div>
+    <div class="card">
+        <div class="name">
+         <h3>Basic</h3>
+        </div>
+        <div class="details">
+    <div class="content">
+    <h2 style="text-align: center;margin: auto;display: block;">$100 <span>/Month</span></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur perspiciatis quos et cum ullam quae inventore ad repudiandae!</p>
+    <a href="#" style="width: 150px;">Buy Now</a>
+    </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="name">
+             <h3>Premium</h3>
+            </div>
+            <div class="details">
+        <div class="content">
+        <h2 style="text-align: center;margin: auto;display: block;">$500 <span>/Month</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur perspiciatis quos et cum ullam quae inventore ad repudiandae!</p>
+        <a href="#" style="width: 150px;">Try Now</a>
+        </div>
+            </div>
+            </div>
+            
+    </div>
+<br>
+<br>
+<br>
+
+<div class="container mt-4">
+    <h5 class="text-center">What Are You Waiting For...</h5>
+    <h3 class="text-center">Book An Appointment</h3>
+<div class="row mt-4">
+<div class="col-md-6 contact">
+<h3>Hours & Contact</h3>
+<p>123 Fifth Avenue, , NY 10160, SRPT, 2-104\A</p>
+<p>Mon-Fri: 6am-10pm / Sat-Sun: 8am-2pm​</p>
+</div>
+<div class="col-md-6 mt-4">
+  <form>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="FULL NAME">
+        </div><br>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="EMAIL">
+        </div><br>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="PHONE">
+        </div>
+
+    </form>
+    <br>
+    <button type="button" class="btn btn-lg btn-danger " style="margin: auto; display: block;">Book An Appointment</button>
+
+</div>
+</div>
+<!-- <button type="button" class="btn btn-lg btn-danger" style="margin: auto; display: block;">Book An Appointment</button> -->
+
+</div>
+  <br>
+
+
+<section class="blog2">
+    <div class="container">
+<div class="row">
+<div class="col-md-12">
+<h5>Follow Us for Offers & Updates</h5><br><br>
+<h2>Stay In Touch</h2>
+<p>Repudiandae quisquam culpa diam, do ipsam est. Quam fuga nihil, similique <br>felis ac recusandae. Doloribus praesent molestiae mattis facilisis.
+
+</p>
+</div>
+</div>
+    </div>
+</section>
+<a class="scrollTop" href="#" style="text-decoration: none;"><i class="fa fa-chevron-up"></i></a> 
+
+<!--  <footer> -->
+    <footer class="page-footer bg-dark">
+        <div class="bg-success">
+        <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+            <div class="col-md-12 text-center">
+        <a href="#"><i class="fa fa-google-plus text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"> <i class="fa fa-whatsapp text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter text-white mr-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="container text-center text-md-left mt-5 text-white">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">The Providers</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+        <p class="mt-2" style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p>
+        </div>
+        <div class="col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Products</h6>
+            <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+            <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+        
+            <ul class="list-unstyled text-white">
+              <li class="my-2"><a href="#" style="color: white;">HTML 5</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">CSS</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">JAVA SCRIPT</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">BOOTSTRAP</a> </li>
+          </ul>
+          </div>
+          <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Usefull Links</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+              <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+          
+              <ul class="list-unstyled text-white">
+                  <li class="my-2"><a href="Index.html" style="color: white;">Home</a> </li>
+                  <li class="my-2"><a href="about.html" style="color: white;">About Us</a> </li>
+                  <li class="my-2"><a href="user.html" style="color: white;">Services</a> </li>
+                  <li class="my-2"><a href="contact.html" style="color: white;">Contact</a> </li>
+              </ul>
+              </div>
+              <div class="col-md-3 mx-auto mb-4">
+                  <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                  <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px;">
+                  <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+                  <ul class="list-unstyled">
+                      <li class="my-2"> <i class="fa fa-home mr-3" aria-hidden="true"></i>suryapet</li>
+                      <li class="my-2"><i class="fa fa-envelope-o mr-3" aria-hidden="true"></i> gaggenapallysandeep487@gmail.com</li>
+                      <li class="my-2"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>+91-9666251994</li>
+                      <li class="my-2"><i class="fa fa-print mr-3" aria-hidden="true"></i>+0123456789</li>
+                  </ul>
+                  </div>
+        </div>
+        </div>
+        <hr color="white" width="80%">
+
+        <div class="footer-copyright text-center py-3 text-white">
+          <p style="color: white;">Copyright © 2020 SPA . All rights reserved.</p>
+          <!-- <p style="color: white;">Desigend By The Providers</p> -->
+        </div>
+        </footer>  
+        
+        <!-- </footer> -->
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script> 
+<script>
+       const scrollTop = document.querySelector(".scrollTop"); 
+       
+       window.addEventListener("scroll", () => {
+           if (window.pageYOffset > 100){
+               scrollTop.classList.add("active");
+           } else{
+               scrollTop.classList.remove("active");  
+           }
+       })
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    color: #555555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #f1607d;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background: rgba(160, 55, 55, 0.856);
+}
+
+.header{
+    background-image: url(images/img4.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    opacity: 0.5;
+    height: 400px;
+}
+
+.header .row{
+    margin-top:70px ;
+}
+
+.categories{
+    margin: 70px 0;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555555;
+}
+
+.title::after{
+    content: '';
+    background: #faadbd ;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4{
+    color: #555555;
+    font-weight: normal;
+}
+
+    .contact{
+padding-top: 30px;
+    }
+
+    .icons{
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: fixed;
+  z-index: 100;
+}
+.icons ul{
+  padding: initial;
+}
+.icons ul li{
+height: 40px;
+width: 40px;
+list-style-type: none;
+padding-left: 12px;
+padding-top: 6px;
+margin-top: 5px;
+color: #fff;
+/* background: #000; */
+}
+.facebook{
+  background: #3b5998
+}
+.whatsapp{
+  background: #06b82d;
+}
+.twitter{
+  background: #55acee;
+}
+.instagram{
+  background: #ff4800;
+}
+.youtube{
+  background: #ff0000;
+}
+.icons ul li:hover{
+  padding-left: 30px;
+  width: 80px;
+  transition: 1s;
+}
+.scrollTop {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+	background: deepskyblue;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+    text-decoration: none;
+}
+.scrollTop.active {
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(-50px);
+    text-decoration: none;
+}
+
+footer{
+               margin-top: 50px;
+             }
+             .gotopbtn{
+              position: fixed;
+              width: 50px;
+              height: 50px;
+              background: #27ae60;
+              bottom: 40px;
+              right: 50px;
+            
+              text-decoration: none;
+              text-align: center;
+              line-height: 50px;
+              color: white;
+              font-size: 22px;
+            }
+            
+</style>
+</head>
+<body>
+
+    <section id="demo2">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="" / width="60px">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"></a>
+                    <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4  class="text-center" style="margin-top: 130px; color: black; font-size: 20px;">What Are You Waiting For?</h4>
+                       <h3 class="text-center" style="margin-top: 0px; color: black; font-size: 40px;">CONTACT US TODAY</h3> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <div class="icons">
+        <ul>
+          <a href="#"><li class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li> </a>
+          <a href="#"><li class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li> </a>
+          <a href="#"><li class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li> </a>
+          <a href="#"><li class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></li> </a>
+          <a href="#"><li class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></li> </a>
+        
+        </ul>
+        </div>
+        
+  <div class="container mt-4">
+      <h5 class="text-center">What Are You Waiting For...</h5>
+      <h3 class="text-center">Book An Appointment</h3>
+<div class="row mt-4">
+<div class="col-md-6 contact">
+  <h3>Hours & Contact</h3>
+  <p>123 Fifth Avenue, , NY 10160, SRPT, 2-104\A</p>
+  <p>Mon-Fri: 6am-10pm / Sat-Sun: 8am-2pm​</p>
+</div>
+<div class="col-md-6 mt-4">
+    <form>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="FULL NAME">
+          </div><br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="EMAIL">
+          </div><br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="PHONE">
+          </div>
+
+      </form>
+      <br>
+      <button type="button" class="btn btn-lg btn-danger " style="margin: auto; display: block;">Book An Appointment</button>
+
+</div>
+</div>
+<!-- <button type="button" class="btn btn-lg btn-danger" style="margin: auto; display: block;">Book An Appointment</button> -->
+
+  </div>
+    <br>
+  <div class="container-fluid"> 
+       <div class="row">
+            <div class="col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d975929.5308392295!2d78.43312909638189!3d17.159275840838202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d17.4354574!2d78.4027737!4m5!1s0x3a34dbb936420209%3A0xfbf6b844cdbdb717!2sSuryapet%2C%20Telangana!3m2!1d17.1313756!2d79.6336242!5e0!3m2!1sen!2sin!4v1608115370687!5m2!1sen!2sin" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+       </div>
+  </div>
+  <a class="scrollTop" href="#" style="text-decoration: none;"><i class="fa fa-chevron-up"></i></a> 
+
+  <!--  <footer> -->
+    <footer class="page-footer bg-dark">
+        <div class="bg-success">
+        <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+            <div class="col-md-12 text-center">
+        <a href="#"><i class="fa fa-google-plus text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"> <i class="fa fa-whatsapp text-white mr-4" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter text-white mr-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="container text-center text-md-left mt-5 text-white">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">The Providers</h6>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+        <p class="mt-2" style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p>
+        </div>
+        <div class="col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Products</h6>
+            <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+            <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+        
+            <ul class="list-unstyled text-white">
+              <li class="my-2"><a href="#" style="color: white;">HTML 5</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">CSS</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">JAVA SCRIPT</a> </li>
+              <li class="my-2"><a href="#" style="color: white;">BOOTSTRAP</a> </li>
+          </ul>
+          </div>
+          <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Usefull Links</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px;">
+              <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+          
+              <ul class="list-unstyled text-white">
+                  <li class="my-2"><a href="Index.html" style="color: white;">Home</a> </li>
+                  <li class="my-2"><a href="about.html" style="color: white;">About Us</a> </li>
+                  <li class="my-2"><a href="user.html" style="color: white;">Services</a> </li>
+                  <li class="my-2"><a href="contact.html" style="color: white;">Contact</a> </li>
+              </ul>
+              </div>
+              <div class="col-md-3 mx-auto mb-4">
+                  <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                  <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px;">
+                  <!-- <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, soluta!</p> -->
+                  <ul class="list-unstyled">
+                      <li class="my-2"> <i class="fa fa-home mr-3" aria-hidden="true"></i>suryapet</li>
+                      <li class="my-2"><i class="fa fa-envelope-o mr-3" aria-hidden="true"></i> gaggenapallysandeep487@gmail.com</li>
+                      <li class="my-2"><i class="fa fa-phone-square mr-3" aria-hidden="true"></i>+91-9666251994</li>
+                      <li class="my-2"><i class="fa fa-print mr-3" aria-hidden="true"></i>+0123456789</li>
+                  </ul>
+                  </div>
+        </div>
+        </div>
+        <hr color="white" width="80%">
+        
+        <div class="footer-copyright text-center py-3 text-white">
+          <p style="color: white;">Copyright © 2020 SPA . All rights reserved.</p>
+          <!-- <p style="color: white;">Desigend By The Providers</p> -->
+        </div>
+        </footer>  
+        
+        <!-- </footer> -->
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script> 
+  <script>
+         const scrollTop = document.querySelector(".scrollTop"); 
+         
+         window.addEventListener("scroll", () => {
+             if (window.pageYOffset > 100){
+                 scrollTop.classList.add("active");
+             } else{
+                 scrollTop.classList.remove("active");  
+             }
+         })
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</body>
+</html>
